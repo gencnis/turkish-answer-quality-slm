@@ -1,0 +1,5 @@
+strategy,label,meaning,count,percentage
+A_score_7_8,0,low_quality_score_<=7,1122,7.754509641302095
+A_score_7_8,1,high_quality_score_>=8,13347,92.24549035869791
+B_score_8_9,0,low_quality_score_<=8,8856,61.2067178104914
+B_score_8_9,1,high_quality_score_>=9,5613,38.7932821895086
