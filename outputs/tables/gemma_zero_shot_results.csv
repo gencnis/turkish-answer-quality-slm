@@ -1,0 +1,3 @@
+model,evaluation_type,sample_size,prompt_version,accuracy,macro_f1,weighted_f1,valid_predictions,invalid_predictions,notes
+Gemma-4-E2B-it,zero_shot_sample,20,v3,0.55,0.5488721804511278,0.5488721804511277,20,0,Model returned parseable 0/1 labels for all 20 examples.
+Gemma-4-E2B-it,zero_shot_sample,100,v3,0.5353535353535354,0.5088438308886971,0.5099964267349945,99,1,One output was not parseable and was excluded from metric calculation.
