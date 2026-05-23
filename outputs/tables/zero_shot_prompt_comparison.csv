@@ -5,3 +5,5 @@ Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v2,0.52,0.43899018232819076,0.4389901
 Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v3,0.6,0.5604395604395604,0.5604395604395604,Strict prompt; better than v2 on 20-sample test.
 Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v3,0.57,0.5242836596968692,0.5242836596968692,Best prompt so far; still biased toward label 1.
 SmolLM2-360M-Instruct,zero_shot_sample,20,v3,0.5,0.3333333333333333,0.3333333333333333,Model predicted label 0 for all examples.
+TinyLlama-1.1B-Chat-v1.0,zero_shot_sample,20,v3,,,,Model did not reliably return parseable 0/1 labels; most outputs were text continuations.
+TinyLlama-1.1B-Chat-v1.0,zero_shot_sample,20,short_prompt_context_1000,,,,Shorter prompt and 1000-character context still failed to produce parseable 0/1 labels.
