@@ -1,0 +1,6 @@
+model,evaluation_type,sample_size,prompt_version,accuracy,macro_f1,weighted_f1,notes
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v1,0.5,0.3333333333333333,0.3333333333333333,Initial prompt; model predicted label 1 for all examples.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v2,0.55,0.48717948717948717,0.4871794871794871,Stricter prompt; reduced but did not remove label 1 bias.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v2,0.52,0.43899018232819076,0.43899018232819076,Balanced 100-sample evaluation with prompt v2.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v3,0.6,0.5604395604395604,0.5604395604395604,Strict prompt; better than v2 on 20-sample test.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v3,0.57,0.5242836596968692,0.5242836596968692,Best prompt so far; still biased toward label 1.
