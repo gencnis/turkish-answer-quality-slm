@@ -1,0 +1,11 @@
+model,evaluation_type,sample_size,prompt_version,accuracy,macro_f1,weighted_f1,valid_predictions,invalid_predictions,notes
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v1,0.5,0.3333333333333333,0.3333333333333333,20,0,Initial prompt; model predicted label 1 for all examples.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v2,0.55,0.48717948717948717,0.4871794871794871,20,0,Stricter prompt; reduced but did not remove label 1 bias.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v2,0.52,0.43899018232819076,0.43899018232819076,100,0,Balanced 100-sample evaluation with prompt v2.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,20,v3,0.6,0.5604395604395604,0.5604395604395604,20,0,Strict prompt; better than v2 on 20-sample test.
+Qwen2.5-1.5B-Instruct,zero_shot_sample,100,v3,0.57,0.5242836596968692,0.5242836596968692,100,0,Best Qwen prompt; still biased toward label 1.
+SmolLM2-360M-Instruct,zero_shot_sample,20,v3,0.5,0.3333333333333333,0.3333333333333333,20,0,Model predicted label 0 for all examples.
+TinyLlama-1.1B-Chat-v1.0,zero_shot_sample,20,v3,,,,0,20,Model did not reliably return parseable 0/1 labels; most outputs were text continuations.
+TinyLlama-1.1B-Chat-v1.0,zero_shot_sample,20,short_prompt_context_1000,,,,0,20,Shorter prompt and 1000-character context still failed to produce parseable 0/1 labels.
+Gemma-4-E2B-it,zero_shot_sample,20,v3,0.55,0.5488721804511278,0.5488721804511277,20,0,Model returned parseable 0/1 labels for all 20 examples.
+Gemma-4-E2B-it,zero_shot_sample,100,v3,0.5353535353535354,0.5088438308886971,0.5099964267349945,99,1,One output was not parseable and was excluded from metric calculation.
