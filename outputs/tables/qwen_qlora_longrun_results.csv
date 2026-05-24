@@ -1,0 +1,2 @@
+model,training_type,dataset_strategy,max_length,max_steps,learning_rate,train_batch_size,gradient_accumulation_steps,test_accuracy,test_macro_f1,test_weighted_f1,prediction_label_0_count,prediction_label_1_count,true_label_0_count,true_label_1_count,correct_count,wrong_count,checkpoint_dir
+Qwen2.5-1.5B-Instruct,qlora_finetuning_longrun,strategy_b,768,600,2e-05,1,16,0.5715272978576365,0.5071417584107939,0.5469056766542549,1085,362,885,562,827,620,/content/drive/MyDrive/turkish_answer_quality_slm/qwen_strategy_b_qlora_longrun
