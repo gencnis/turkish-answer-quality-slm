@@ -1,0 +1,2 @@
+model,training_type,dataset_strategy,max_length,max_steps,learning_rate,train_batch_size,gradient_accumulation_steps,test_accuracy,test_macro_f1,test_weighted_f1,prediction_label_0_count,prediction_label_1_count,correct_count,wrong_count
+Qwen2.5-1.5B-Instruct,lora_finetuning_pilot,strategy_b,768,100,2e-05,1,16,0.5473393227366966,0.5192103318150528,0.5451693720084556,912,535,792,655
