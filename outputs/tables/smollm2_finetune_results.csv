@@ -1,0 +1,3 @@
+model,method,split,accuracy,macro_f1,weighted_f1,loss
+SmolLM2-360M-Instruct,LoRA fine-tuning,validation,0.598479612992398,0.45523426286817714,0.5179764984347159,0.6787109375
+SmolLM2-360M-Instruct,LoRA fine-tuning,test,0.5888044229440221,0.4332941691432257,0.49956041185781314,
