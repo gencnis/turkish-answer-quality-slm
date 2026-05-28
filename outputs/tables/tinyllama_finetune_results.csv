@@ -1,0 +1,3 @@
+﻿model,method,checkpoint,split,accuracy,macro_f1,weighted_f1,loss
+TinyLlama-1.1B-Chat-v1.0,LoRA fine-tuning,checkpoint-200,validation,0.572218382861092,0.5312041871115473,0.5623481441643557,0.802734375
+TinyLlama-1.1B-Chat-v1.0,LoRA fine-tuning,checkpoint-200,test,0.5459571527297857,0.4924051302012004,0.5292079031304198,
