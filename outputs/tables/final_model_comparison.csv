@@ -1,0 +1,10 @@
+model,evaluation_stage,method,split,sample_size,prompt_version,checkpoint,status,accuracy,macro_f1,weighted_f1,test_size,true_label_0_count,true_label_1_count,predicted_label_0_count,predicted_label_1_count,valid_predictions,invalid_predictions,notes
+Majority Class Baseline,baseline,always_predict_label_0,test,full_test,,,completed,0.6116,0.3795,0.4642,1447,885,562,1447,0,1447,0,Reference baseline on Strategy B test set; accuracy is high because label 0 is the majority class.
+Qwen2.5-1.5B-Instruct,zero_shot,prompt_based_classification,balanced_test_sample,100,v3,,completed,0.5700,0.5243,0.5243,,,,,,100,0,Best Qwen zero-shot setting; still biased toward label 1.
+SmolLM2-360M-Instruct,zero_shot,prompt_based_classification,balanced_test_sample,20,v3,,completed,0.5000,0.3333,0.3333,,,,,,20,0,Predicted label 0 for all examples.
+TinyLlama-1.1B-Chat-v1.0,zero_shot,prompt_based_classification,balanced_test_sample,20,v3,,not_parseable,,,,,,,,,0,20,Did not reliably return parseable 0/1 labels.
+Gemma-4-E2B-it,zero_shot,prompt_based_classification,balanced_test_sample,100,v3,,completed,0.5354,0.5088,0.5100,,,,,,99,1,One output was not parseable and was excluded from metric calculation.
+SmolLM2-360M-Instruct,fine_tuning,LoRA sequence classification,test,full_test,,,completed,0.5888,0.4333,0.4996,1447,885,562,1320,127,1447,0,Completed collaborator-side fine-tuning. Strong conservative bias toward label 0.
+TinyLlama-1.1B-Chat-v1.0,fine_tuning,LoRA sequence classification,test,full_test,,checkpoint-200,completed,0.5460,0.4924,0.5292,1447,885,562,1032,415,1447,0,Completed collaborator-side fine-tuning using checkpoint-200; checkpoint selection should be documented.
+Qwen2.5-1.5B-Instruct,fine_tuning,QLoRA sequence classification,test,full_test,,checkpoint-600,completed,0.5715,0.5071,0.5469,1447,885,562,1085,362,1447,0,Best fine-tuned macro F1 among completed fine-tuning runs; still over-predicts label 0.
+Gemma-4-E2B-it,fine_tuning,QLoRA attempted,test,full_test,,,not_completed,,,,,,,,,,,"Fine-tuning not completed due to sequence classification support, CUDA memory, and PEFT LoRA target module compatibility limitations."
