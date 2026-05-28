@@ -144,28 +144,61 @@ Among the completed fine-tuning runs, **Qwen2.5-1.5B-Instruct** achieved the bes
 ## Repository Structure
 
 ```text
-data/
-  processed/
-    strategy_a/
-    strategy_b/
-
-notebooks/
-  04_zero_shot_evaluation.ipynb
-  05_zero_shot_gemma.ipynb
-  09_finetune_smollm2.ipynb
-  10_finetune_tinyllama.ipynb
-  07_finetune_qwen.ipynb
-  08_finetune_gemma_qlora.ipynb
-
-outputs/
-  tables/
-    final_model_comparison.csv
-    smollm2_finetune_results.csv
-    smollm2_test_predictions.csv
-    tinyllama_finetune_results.csv
-    tinyllama_test_predictions.csv
-    qwen_qlora_longrun_results.csv
-    qwen_qlora_longrun_test_predictions.csv
+.
+├── README.md
+├── data/
+│   └── processed/
+│       ├── strategy_a/
+│       └── strategy_b/
+│           ├── train.csv
+│           ├── validation.csv
+│           └── test.csv
+│
+├── docs/
+│   └── prompts/
+│       ├── zero_shot_prompt_v1.txt
+│       ├── zero_shot_prompt_v2.txt
+│       ├── zero_shot_prompt_v3.txt
+│       └── tinyllama_short_prompt_context_1000.txt
+│
+├── figures/
+│   ├── input_length_before_truncation.png
+│   └── input_length_after_truncation.png
+│
+├── notebooks/
+│   ├── 01_dataset_analysis.ipynb
+│   ├── 02_preprocessing_and_input_format.ipynb
+│   ├── 03_baseline_evaluation.ipynb
+│   ├── 04_zero_shot_evaluation.ipynb
+│   ├── 05_gemma_zero_shot_evaluation.ipynb
+│   ├── 06_finetune_smollm2_template.ipynb
+│   ├── 07_finetune_qwen_preliminary.ipynb
+│   ├── 07_finetune_qwen.ipynb
+│   ├── 08_finetune_gemma_qlora.ipynb
+│   ├── 09_finetune_smollm2.ipynb
+│   ├── 10_finetune_tinyllama.ipynb
+│   └── 11_input_length_analysis.ipynb
+│
+└── outputs/
+    └── tables/
+        ├── final_model_comparison.csv
+        ├── final_zero_shot_summary.csv
+        ├── gemma_zero_shot_100_sample_predictions_v3.csv
+        ├── gemma_zero_shot_results.csv
+        ├── label_strategy_summary.csv
+        ├── majority_baseline_strategy_b.csv
+        ├── qwen_finetune_pilot_results.csv
+        ├── qwen_finetune_pilot_test_predictions.csv
+        ├── qwen_qlora_longrun_results.csv
+        ├── qwen_qlora_longrun_test_predictions.csv
+        ├── qwen_zero_shot_100_sample_predictions_v3.csv
+        ├── qwen_zero_shot_prompt_comparison.csv
+        ├── smollm2_finetune_results.csv
+        ├── smollm2_test_predictions.csv
+        ├── tinyllama_finetune_results.csv
+        ├── tinyllama_test_predictions.csv
+        ├── tinyllama_zero_shot_failed_predictions.csv
+        └── zero_shot_prompt_comparison.csv
 ```
 
 ## Important Output Files
